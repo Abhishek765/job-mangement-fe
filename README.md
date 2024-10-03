@@ -1,8 +1,14 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
+- This is a Frontend part of full-stack Job-Queue management app
+- To check the Backend code please refer: https://github.com/Abhishek765/Job-Management-BE
+
 ## Getting Started
 
-First, run the development server:
+- Clone the repo
+- create a `.env.development` file under `envs` folder and copy paste the contents from `.env.sample` file into it
+- install dependencies via,`npm i` or `yarn`
+- run the development server:
 
 ```bash
 npm run dev
@@ -20,17 +26,14 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## Learn More
+## Main components of the application
 
-To learn more about Next.js, take a look at the following resources:
+- app/page.tsx -> includes the homepage
+  - from here user can see all current jobs (with their status & result if resolved) in a paginated way
+  - User can create new Jobs to see the process in action
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Total time taken to create FE -> 4-5 hrs (Whole setup, Component designing, api integration, polling approach, pagination etc...)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Some Screenshots of the application
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+![alt text](image.png)
