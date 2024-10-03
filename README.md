@@ -36,4 +36,18 @@ Total time taken to create FE -> 4-5 hrs (Whole setup, Component designing, api 
 
 ## Some Screenshots of the application
 
-![alt text](image.png)
+<p align="center">
+    <img src="https://raw.githubusercontent.com/Abhishek765/job-mangement-fe/refs/heads/master/public/demo/image.png" alt="image 0"/>
+</p>
+<p align="center">
+    <img src="https://raw.githubusercontent.com/Abhishek765/job-mangement-fe/refs/heads/master/public/demo/image%20(1).png" alt="image 1"/>
+</p>
+<p align="center">
+    <img src="https://raw.githubusercontent.com/Abhishek765/job-mangement-fe/refs/heads/master/public/demo/image%20(2).png" alt="image 2"/>
+</p>
+<p align="center">
+    <img src="https://raw.githubusercontent.com/Abhishek765/job-mangement-fe/refs/heads/master/public/demo/image%20(3).png" alt="image 3"/>
+</p>
+<p align="center">
+    <img src="https://raw.githubusercontent.com/Abhishek765/job-mangement-fe/refs/heads/master/public/demo/image%20(4).png" alt="image 4"/>
+</p>
