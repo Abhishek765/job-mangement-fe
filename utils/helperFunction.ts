@@ -14,7 +14,7 @@ export const pollApi = async ({
     try {
       const response = await axios.get(apiEndpoint);
       const data = await response.data.data;
-      // stop polling
+      // stop polling cases
       if (data.status === failureResponse) {
         console.log("Failure response received:");
         if (timerId) {
