@@ -4,6 +4,7 @@ import axios from "axios";
 export const pollApi = async ({
   apiEndpoint,
   successResponse,
+  failureResponse,
   pollingInterval,
   maxPollingDuration,
 }: TApiPollingParameters): Promise<Job | null> => {
@@ -14,6 +15,13 @@ export const pollApi = async ({
       const response = await axios.get(apiEndpoint);
       const data = await response.data.data;
       // stop polling
+      if (data.status === failureResponse) {
+        console.log("Failure response received:");
+        if (timerId) {
+          clearTimeout(timerId);
+        }
+        return data;
+      }
       if (data.status === successResponse) {
         console.log("Success response received:");
         if (timerId) {

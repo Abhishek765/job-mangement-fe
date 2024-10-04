@@ -7,6 +7,7 @@ import { pollApi } from "@/utils/helperFunction";
 type JobCardProps = Job;
 
 const successResponse: Job["status"] = "resolved";
+const failureResponse: Job["status"] = "failed";
 const pollingInterval = 5000; // 5 seconds
 const maxPollingDuration = 300000; // 300 seconds (5 minutes)
 
@@ -19,6 +20,7 @@ const JobCard = ({ id, status, result = [] }: JobCardProps) => {
     const data = await pollApi({
       apiEndpoint: `${process.env.NEXT_PUBLIC_SERVER}/api/v1/jobs/${id}`,
       successResponse,
+      failureResponse,
       pollingInterval,
       maxPollingDuration,
     });
@@ -47,7 +49,7 @@ const JobCard = ({ id, status, result = [] }: JobCardProps) => {
             <Button onClick={() => setIsImageVisible(false)}>Hide Image</Button>
           </div>
         ) : (
-          <p className="text-black">Loading...</p>
+          currJobStatus !== "failed" && <p className="text-black">Loading...</p>
         )}
         {currJobStatus === "resolved" &&
           isImageVisible &&

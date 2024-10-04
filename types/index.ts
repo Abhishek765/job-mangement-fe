@@ -7,6 +7,7 @@ export type Job = {
 export type TApiPollingParameters = {
   apiEndpoint: string;
   successResponse: Job["status"];
+  failureResponse: Job["status"];
   pollingInterval: number;
   maxPollingDuration: number;
 };
